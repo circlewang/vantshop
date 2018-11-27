@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper">
-        <div class="item-content" v-for="hot in hots" :key="hot.id">
+        <div class="item-content" v-for="hot in hots" :key="hot.id" :id="'border-left'+hot.id">
             <div class="item-img-content">
-                <div class="item-title">{{hot.title}}</div>
+                <div class="item-title" :id="'color'+hot.id">{{hot.title}}</div>
                 <p class="item-desc">{{hot.desc}}</p>
                 <div class="item-img-wrapper1">
                     <img class="item-img" :src="hot.imgUrl1">
@@ -54,15 +54,28 @@ export default {
 .wrapper{
     width: 100%;
     overflow: hidden;
+    #border-left0001,#border-left0002{
+        border-bottom:1px solid #f2f2f2;
+    }
     .item-content{
         width: 49%;
         height:0;
         padding-bottom: 35%;
         overflow: hidden;
         display: inline-block;
+        box-sizing: border-box;
         .item-img-content{
             float: left;
-            width: 49%;
+            width: 50%;
+            #color0001{
+                color:#e8310e;
+            }#color0002{
+                color:#639dec;
+            }#color0003{
+                color:#ef7a2d;
+            }#color0004{
+                color:#e8310e;
+            }
              .item-title{
                 display: inline-block;
                 padding: .2rem 0 .1rem .3rem;

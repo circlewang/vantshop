@@ -6,7 +6,7 @@
             <div class="item-img-wrapper">
                 <img class="item-img" :src="category.imgUrl">
             </div>
-            <p class="item-img-title">{{category.title}}</p>
+            <div class="item-img-title">{{category.title}}</div>
         </div>
     </div>
     <back-height></back-height>
@@ -80,7 +80,7 @@ export default {
         background: #fff;
         height:0;
         line-height: 3rem;
-        padding-bottom: 45%;
+        padding-bottom: 50%;
         margin-top: -.25rem;
         border-top-right-radius: 50%;
         border-top-left-radius: 50%;
@@ -93,14 +93,14 @@ export default {
             top:0;
             left:0;
             height:0;
-            line-height: 1rem;
-            padding-bottom: 22%;
+            line-height: .5rem;
+            padding-bottom: 23%;
+            margin-top:.1rem;
             box-sizing: border-box;
             .item-img-wrapper{
-                position: absolute;
                 top:0;
                 left:0;
-                bottom:.3rem;
+                bottom:.1rem;
                 padding: .11rem;
                 box-sizing: border-box;
                 .item-img{
@@ -108,7 +108,6 @@ export default {
                 }
             }
             .item-img-title{
-                line-height: 2.8rem;
                 text-align: center;
                 font-size: .18rem;
                 color:#666;
